@@ -144,3 +144,5 @@ dev.off()
 pdf("../../results_1/results_figures/orig.ident_har_befor.pdf" )
 DimPlot(saple_obj, reduction = "umap",group.by = "orig.ident" )+scale_color_jco()+scale_fill_jco()
 dev.off()
+
+
