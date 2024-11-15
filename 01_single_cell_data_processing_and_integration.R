@@ -97,7 +97,8 @@ for(i in 1:length(dir)){
   HB.genes <- CaseMatch(HB.genes, rownames(scRNAlist[[i]]))
   scRNAlist[[i]][["percent.HB"]]<-PercentageFeatureSet(scRNAlist[[i]], features=HB.genes) 
 
-  scRNAlist[[i]]  <- subset(scRNAlist[[i]] ,subset = nFeature_RNA > 200 &nFeature_RNA < 10000 &nCount_RNA > 500& percent.mt < 20 & percent.HB < 10 )   
+  scRNAlist[[i]]  <- subset(scRNAlist[[i]] ,subset = nFeature_RNA > 200 &nFeature_RNA < 10000 &nCount_RNA > 500& percent.mt < 20 & percent.HB < 10 )  
+  
 } 
 scRNAlist_2  <- scRNAlist
 
@@ -145,3 +146,8 @@ DimPlot(saple_obj, reduction = "umap",group.by = "orig.ident" )+scale_color_jco(
 dev.off()
 
  
+
+
+
+
+
